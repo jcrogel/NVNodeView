@@ -32,16 +32,36 @@
 
 -(void) commonInit
 {
-    [[self layer] setBorderColor:[NSColor blackColor].CGColor];
-    [[self layer] setBackgroundColor:[NSColor grayColor].CGColor];
+    [self setWantsLayer:YES];
+    [[self layer] setBorderColor:[NSColor darkGrayColor].CGColor];
+    [[self layer] setBorderWidth:1.0];
+    [[self layer] setBackgroundColor:[NSColor lightGrayColor].CGColor];
+    [[self layer] setCornerRadius:5];
 }
 
 - (void)drawRect:(NSRect)dirtyRect
 {
     [super drawRect:dirtyRect];
 
-    NSLog(@"%@", NSStringFromRect(dirtyRect));
+
+
     // Drawing code here.
+}
+
+
+-(void)mouseDown:(NSEvent *)event
+{
+    NSLog(@"Node Mouse Down");
+}
+
+-(void)mouseDragged:(NSEvent *)event
+{
+    NSLog(@"Node Mouse Drag");
+}
+
+-(void)mouseUp:(NSEvent *)event
+{
+    NSLog(@"Node Mouse Up");
 }
 
 @end

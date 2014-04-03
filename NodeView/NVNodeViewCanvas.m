@@ -35,19 +35,15 @@
 -(void) commonInit
 {
     self.nodes = [[NSDictionary alloc] init];
-    [[self layer] setBackgroundColor:[NSColor redColor].CGColor];
-    [self setAlphaValue:1.0];
-    [self setHidden:NO];
-    [self setWantsLayer:YES];
-    
-    NSLog(@"Setting red");
+    //[self setWantsLayer:YES];
+    //[[self layer] setBackgroundColor:[NSColor redColor].CGColor];
 }
 
 - (void)drawRect:(NSRect)dirtyRect
 {
-    NSLog(@"NodeCanvas %@", NSStringFromRect(dirtyRect));
     [super drawRect:dirtyRect];
     // Drawing code here.
+    
 }
 
 -(void) addNamedNVNode:(NSString *)newName
@@ -70,6 +66,21 @@
     [nodeDict setObject:nodeObj forKey:newName];
     self.nodes = nodeDict;
     [self addSubview:nodeObj];
+}
+
+-(void)mouseDown:(NSEvent *)event
+{
+    NSLog(@"NV Mouse Down");
+}
+
+-(void)mouseDragged:(NSEvent *)event
+{
+    NSLog(@"NV Mouse Drag");
+}
+
+-(void)mouseUp:(NSEvent *)event
+{
+    NSLog(@"NV Mouse Up");
 }
 
 @end
