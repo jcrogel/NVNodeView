@@ -18,6 +18,9 @@
 		E954C5E918ED068D006192E4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E954C5C818ED068D006192E4 /* Cocoa.framework */; };
 		E954C5F118ED068D006192E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E954C5EF18ED068D006192E4 /* InfoPlist.strings */; };
 		E954C5F318ED068D006192E4 /* NodeViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E954C5F218ED068D006192E4 /* NodeViewTests.m */; };
+		E954C5FE18ED073E006192E4 /* NVNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E954C5FD18ED073E006192E4 /* NVNode.m */; };
+		E954C60118ED0786006192E4 /* NVNodeViewCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = E954C60018ED0786006192E4 /* NVNodeViewCanvas.m */; };
+		E954C60418ED0848006192E4 /* NVNodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = E954C60318ED0848006192E4 /* NVNodeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,12 @@
 		E954C5EE18ED068D006192E4 /* NodeViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NodeViewTests-Info.plist"; sourceTree = "<group>"; };
 		E954C5F018ED068D006192E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E954C5F218ED068D006192E4 /* NodeViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeViewTests.m; sourceTree = "<group>"; };
+		E954C5FC18ED073E006192E4 /* NVNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVNode.h; sourceTree = "<group>"; };
+		E954C5FD18ED073E006192E4 /* NVNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVNode.m; sourceTree = "<group>"; };
+		E954C5FF18ED0786006192E4 /* NVNodeViewCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVNodeViewCanvas.h; sourceTree = "<group>"; };
+		E954C60018ED0786006192E4 /* NVNodeViewCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVNodeViewCanvas.m; sourceTree = "<group>"; };
+		E954C60218ED0848006192E4 /* NVNodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVNodeView.h; sourceTree = "<group>"; };
+		E954C60318ED0848006192E4 /* NVNodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVNodeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +126,12 @@
 			children = (
 				E954C5DA18ED068D006192E4 /* NVAppDelegate.h */,
 				E954C5DB18ED068D006192E4 /* NVAppDelegate.m */,
+				E954C5FC18ED073E006192E4 /* NVNode.h */,
+				E954C5FD18ED073E006192E4 /* NVNode.m */,
+				E954C5FF18ED0786006192E4 /* NVNodeViewCanvas.h */,
+				E954C60018ED0786006192E4 /* NVNodeViewCanvas.m */,
+				E954C60218ED0848006192E4 /* NVNodeView.h */,
+				E954C60318ED0848006192E4 /* NVNodeView.m */,
 				E954C5DD18ED068D006192E4 /* MainMenu.xib */,
 				E954C5E018ED068D006192E4 /* Images.xcassets */,
 				E954C5CF18ED068D006192E4 /* Supporting Files */,
@@ -254,6 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E954C5DC18ED068D006192E4 /* NVAppDelegate.m in Sources */,
+				E954C60118ED0786006192E4 /* NVNodeViewCanvas.m in Sources */,
+				E954C5FE18ED073E006192E4 /* NVNode.m in Sources */,
+				E954C60418ED0848006192E4 /* NVNodeView.m in Sources */,
 				E954C5D518ED068D006192E4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +485,7 @@
 				E954C5F818ED068D006192E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E954C5F918ED068D006192E4 /* Build configuration list for PBXNativeTarget "NodeViewTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +494,7 @@
 				E954C5FB18ED068D006192E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

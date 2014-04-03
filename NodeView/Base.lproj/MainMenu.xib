@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5023"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5053"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -13,6 +13,9 @@
         <customObject id="-3" userLabel="Application"/>
         <customObject id="Voe-Tx-rLC" customClass="NVAppDelegate">
             <connections>
+                <outlet property="NodeCanvas" destination="PLv-tt-5w5" id="hYu-Mi-NA6"/>
+                <outlet property="addTBItem" destination="vW6-xY-mim" id="U7Y-Rs-raW"/>
+                <outlet property="toolbar" destination="a4p-GY-PUX" id="3ps-0h-QSV"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -670,11 +673,33 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView id="PLv-tt-5w5" customClass="NVNodeViewCanvas">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </customView>
+                </subviews>
             </view>
+            <toolbar key="toolbar" implicitIdentifier="E0F3AA8C-67A3-4E1C-AF16-76040FE7D38D" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="a4p-GY-PUX">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="E96E875C-28F7-4F4E-9149-86EB21411587" label="Toolbar Item" paletteLabel="Toolbar Item" tag="-1" image="add_icon" id="vW6-xY-mim">
+                        <connections>
+                            <action selector="addNode:" target="Voe-Tx-rLC" id="nG9-zW-70s"/>
+                        </connections>
+                    </toolbarItem>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="vW6-xY-mim"/>
+                </defaultToolbarItems>
+            </toolbar>
         </window>
+        <userDefaultsController representsSharedInstance="YES" id="y6x-cq-Hcn"/>
     </objects>
+    <resources>
+        <image name="add_icon" width="210" height="210"/>
+    </resources>
 </document>
